@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'https://react-php';
+export const API_BASE_URL = '/api';
 
 export const ENDPOINTS = {
 	ITEMS: {
