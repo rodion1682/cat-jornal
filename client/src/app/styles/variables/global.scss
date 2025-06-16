@@ -1,0 +1,77 @@
+:root {
+	--font-family-main: "Nato Sans", sans-serif;
+	--font-size-m: 16px;
+	--font-line-m: 24px;
+	--font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+	--font-size-l: 24px;
+	--font-line-l: 32px;
+	--font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+	--font-size-xl: 32px;
+	--font-line-xl: 40px;
+	--font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+	// positions
+	--category-position: 15px;
+
+	// sizes
+	--navbar-user-icon-size: 35px;
+
+	// heights
+	--input-height: 40px;
+	--navbar-link-height: 50px;
+	--textarea-height: 290px;
+	--login-form-width: 350px;
+
+	// scales
+	--start-scale: 1;
+	--image-scale: 1.02;
+	--button-downscale: 0.97;
+	--search-icon-downscale: 0.85;
+
+	// margins
+	--margin-xs: 5px;
+	--margin-sm: 10px;
+	--margin-md: 15px;
+	--margin-lg: 20px;
+
+	// paddings
+	--padding-xs: 3px;
+	--padding-sm: 5px;
+	--padding-md: 8px;
+	--padding-lg: 10px;
+	--padding-x-lg: 15px;
+	--padding-xx-lg: 30px;
+	--padding-xxx-lg: 40px;
+
+	// gaps
+	--gap-xsmall: 5px;
+	--gap-small: 10px;
+	--gap-medium: 20px;
+	--gap-large: 30px;
+
+	// z-indexes
+	--popup-z-index: 1;
+	--select-z-index: 2;
+	--navbar-dropdown-z-index: 3;
+
+	// borders
+	--border-radius: 8px;
+	--border-width: 2px;
+
+	// timings
+	--hover-duaration: 0.3s;
+
+	// colors
+	--primary-color: #3f72af;
+	--primary-bg-color: #f9f7f7;
+	--secondary-bg-color: #dbe2ef;
+	--hint-color: #112d4e;
+	--hover-overlay: rgba(17, 45, 78, 0.2);
+	--secondary-hover-overlay: rgba(17, 45, 78, 0.7);
+
+	//icon colors
+	--icon-edit-color: #e53935;
+	--icon-edit-hover-color: #ff0400;
+	--icon-add-color: #4caf50;
+	--icon-add-hover-color: #18e41f;
+}

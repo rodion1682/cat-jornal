@@ -1,0 +1,186 @@
+.Input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	&__label {
+		font: var(--font-l);
+		&:not(:last-child) {
+			margin-bottom: var(--margin-xs);
+		}
+		@media (max-width: $md4) {
+			padding: 0px var(--padding-x-lg);
+		}
+	}
+	&__inner {
+		width: 100%;
+	}
+	&__default {
+		border-radius: var(--border-radius);
+		background-color: var(--secondary-bg-color);
+		color: var(--primary-color);
+		border: var(--border-width) solid transparent;
+		transition: border 0.3s ease 0s;
+		&::placeholder {
+			color: var(--primary-color);
+			transition: opacity 0.3s ease 0s;
+		}
+		&:focus {
+			border: var(--border-width) solid var(--primary-color);
+			&::placeholder {
+				opacity: 0;
+			}
+		}
+	}
+	&__input {
+		width: 100%;
+		padding: 0px var(--padding-x-lg);
+		height: var(--input-height);
+		outline: transparent;
+	}
+	&__textarea {
+		width: 100%;
+		padding: var(--padding-lg) var(--padding-x-lg);
+		height: var(--textarea-height);
+		resize: none;
+		overflow-x: auto;
+	}
+	&__textarea,
+	&__input {
+		&.error {
+			border-color: var(--icon-edit-hover-color);
+		}
+	}
+	&__text {
+		margin: var(--margin-xs) var(--margin-sm) 0px var(--margin-sm);
+	}
+}
+
+.Input {
+	&.main {
+		max-width: 290px;
+	}
+	&.large {
+		max-width: 400px;
+	}
+}
+
+.ImageInput {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	&__label {
+		display: block;
+		font: var(--font-l);
+		@media (max-width: $md4) {
+			padding: 0px var(--padding-x-lg);
+		}
+	}
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+	&__uploadText {
+		display: inline-block;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				.ImageInput__imagePreview {
+					img {
+						transform: scale(var(--image-scale));
+					}
+				}
+				.ImageInput___uploadPlaceholder {
+					border-color: var(--hint-color);
+				}
+			}
+		}
+	}
+	&__imagePreview {
+		width: 100%;
+		padding-bottom: 50%;
+		overflow: hidden;
+		border-radius: var(--border-radius);
+		img {
+			transition: transform 0.3s ease 0s;
+		}
+	}
+	&__imageChange {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		background: var(--secondary-hover-overlay);
+		padding: var(--padding-x-lg);
+	}
+	&__uploadPlaceholder {
+		background-color: var(--secondary-bg-color);
+		padding-bottom: 50%;
+		position: relative;
+		border-radius: var(--border-radius);
+		border: var(--border-width) solid transparent;
+		transition: border 0.3s ease 0s;
+		&.error {
+			border-color: var(--icon-edit-hover-color);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--hint-color);
+				.ImageInput__imageSelect {
+					color: var(--hint-color);
+				}
+			}
+		}
+	}
+	&__imageSelect {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: color 0.3s ease 0s;
+	}
+}
+
+.SearchInput {
+	.Input__inner {
+		position: relative;
+	}
+	&__focus {
+		.Input__icon {
+			svg {
+				transform: scale(var(--search-icon-downscale));
+			}
+		}
+	}
+	.Input__input {
+		padding: 0 var(--padding-x-lg) 0 var(--padding-xxx-lg);
+	}
+	.Input__icon {
+		left: 7.5px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		svg {
+			transition: transform 0.3s ease 0s;
+		}
+	}
+}
+
+.PasswordInput {
+	.Input__inner {
+		position: relative;
+	}
+	.Input__input {
+		padding-right: 50px;
+	}
+	.Input__passwordToggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}

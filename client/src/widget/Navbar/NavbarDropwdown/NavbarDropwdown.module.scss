@@ -1,0 +1,29 @@
+.NavbarDropwdown {
+	&__link {
+		display: flex;
+		gap: var(--gap-small);
+	}
+	&__item_dropdown {
+		position: relative;
+	}
+	&__image {
+		width: var(--navbar-user-icon-size);
+		height: var(--navbar-user-icon-size);
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+.Dropdown {
+	z-index: var(--navbar-dropdown-z-index);
+	top: calc(100% + 10px);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	background-color: var(--hint-color);
+	.NavbarDropwdown__link {
+		justify-content: flex-start;
+	}
+}

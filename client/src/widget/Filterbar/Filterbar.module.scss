@@ -1,0 +1,48 @@
+.Filterbar {
+	padding: 0px var(--padding-x-lg);
+	&:not(:last-child) {
+		margin-bottom: var(--margin-lg);
+	}
+	@media (max-width: $md4) {
+		margin-left: calc(-1 * var(--margin-md));
+		margin-right: calc(-1 * var(--margin-md));
+		&:not(:last-child) {
+			margin-bottom: var(--margin-sm);
+		}
+	}
+	&__actions,
+	&__inner {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-medium);
+		@media (max-width: $md4) {
+			gap: var(--gap-xsmall);
+		}
+	}
+	&__inner {
+		justify-content: space-between;
+	}
+	&__actions {
+		@media (max-width: $md2) {
+			flex: 1 1 auto;
+		}
+		@media (max-width: $md3) {
+			flex-wrap: wrap;
+		}
+	}
+	&__input {
+		@media (max-width: $md3) {
+			flex: 1 1 100%;
+		}
+	}
+	&__select {
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+		}
+	}
+	&__button {
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+		}
+	}
+}

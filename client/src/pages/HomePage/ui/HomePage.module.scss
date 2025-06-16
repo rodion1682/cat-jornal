@@ -1,0 +1,13 @@
+.HomePage {
+	&__items {
+		display: flex;
+	}
+	&__filterbar {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-medium);
+		&:not(:last-child) {
+			margin-bottom: var(--margin-lg);
+		}
+	}
+}

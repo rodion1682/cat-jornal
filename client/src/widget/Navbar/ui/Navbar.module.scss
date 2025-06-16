@@ -1,0 +1,40 @@
+.Navbar {
+	padding: 0px 0px 0px var(--padding-x-lg);
+	background-color: var(--hint-color);
+	&:not(:last-child) {
+		margin-bottom: var(--margin-lg);
+	}
+	@media (max-width: $md4) {
+		&:not(:last-child) {
+			margin-bottom: var(--margin-sm);
+		}
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		@media (min-width: $md4) {
+			gap: var(--gap-large);
+		}
+	}
+	&__items {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+	}
+	&__item {
+	}
+	&__link {
+		display: flex;
+		gap: var(--gap-small);
+	}
+	&__item_dropdown {
+		position: relative;
+	}
+	&__image {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}

@@ -1,0 +1,19 @@
+.UserLink {
+	display: flex;
+	align-items: center;
+	gap: var(--gap-small);
+	&__image {
+		width: var(--navbar-user-icon-size);
+		height: var(--navbar-user-icon-size);
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	&__name {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hint-color);
+			}
+		}
+	}
+}

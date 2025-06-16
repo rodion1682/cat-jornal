@@ -1,0 +1,6 @@
+.ItemList {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px calc(-1 * var(--margin-xs));
+	row-gap: var(--gap-small);
+}

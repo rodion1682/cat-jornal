@@ -1,0 +1,57 @@
+// color themes
+
+.Title,
+.Text {
+	&.primary {
+		color: var(--primary-color);
+	}
+}
+
+.Title,
+.Text {
+	&.bg_color {
+		color: var(--primary-bg-color);
+	}
+}
+
+.Title,
+.Text {
+	&.error {
+		color: var(--icon-edit-color);
+	}
+}
+
+.Title,
+.Text {
+	&.hint_primary {
+		color: var(--primary-color);
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hint-color);
+			}
+		}
+	}
+}
+
+// text sizes
+
+.Title,
+.Text {
+	&.medium {
+		font: var(--font-m);
+	}
+}
+
+.Title,
+.Text {
+	&.large {
+		font: var(--font-l);
+	}
+}
+
+.Title,
+.Text {
+	&.extra_large {
+		font: var(--font-xl);
+	}
+}

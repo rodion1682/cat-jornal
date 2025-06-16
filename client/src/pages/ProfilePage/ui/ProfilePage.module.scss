@@ -1,0 +1,35 @@
+.ProfilePage {
+	&__top {
+		display: flex;
+		gap: var(--gap-small);
+		&:not(:last-child) {
+			margin-bottom: var(--margin-sm);
+		}
+		@media (max-width: $md4) {
+			gap: 0px;
+			flex-wrap: wrap;
+		}
+	}
+	&__image {
+		flex: 0 0 19%;
+		padding-bottom: 23%;
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+			padding-bottom: 100%;
+		}
+	}
+	&__about {
+		padding: var(--padding-x-lg);
+		background-color: var(--secondary-bg-color);
+		border-radius: var(--border-radius);
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap-xsmall);
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+		}
+	}
+}

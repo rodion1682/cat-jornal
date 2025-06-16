@@ -1,0 +1,26 @@
+.SignUpPage {
+	&__form {
+		margin: 0 auto;
+		max-width: var(--login-form-width);
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap-medium);
+		&:not(:last-child) {
+			margin-bottom: var(--margin-md);
+		}
+		@media (max-width: $md4) {
+			gap: var(--gap-small);
+		}
+	}
+	&__title,
+	&__text {
+		@media (max-width: $md4) {
+			padding: 0 var(--padding-x-lg);
+		}
+	}
+	&__text {
+		justify-content: center;
+		display: flex;
+		gap: var(--gap-xsmall);
+	}
+}

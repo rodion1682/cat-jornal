@@ -1,0 +1,62 @@
+.AppLink {
+	&.primary_to_hint {
+		color: var(--primary-color);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hint-color);
+			}
+		}
+	}
+	&.navbar {
+		min-height: var(--navbar-link-height);
+		padding: 0px var(--padding-x-lg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--secondary-bg-color);
+		background-color: transparent;
+		border-bottom: var(--border-width) solid transparent;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary-bg-color);
+			}
+		}
+	}
+	&.text_link {
+		font-weight: 600;
+		border-bottom: var(--border-width) solid var(--primary-color);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--hint-color);
+				border-color: var(--hint-color);
+			}
+		}
+	}
+	&.action {
+		padding: var(--padding-md) var(--padding-x-lg);
+		display: flex;
+		gap: var(--gap-xsmall);
+		align-items: center;
+		justify-content: center;
+		background-color: var(--primary-color);
+		border-radius: var(--border-radius);
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--hint-color);
+			}
+		}
+	}
+	&.active {
+		color: var(--primary-bg-color);
+		border-color: var(--primary-bg-color);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}

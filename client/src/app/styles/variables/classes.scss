@@ -1,0 +1,44 @@
+._container {
+	max-width: 1230px;
+	margin: 0 auto;
+}
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+._bg-hover-overlay-scale {
+	position: relative;
+	&::before {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: transparent;
+		transition: color var(--hover-duaration) ease 0s;
+	}
+	img {
+		transform: scale(var(--start-scale));
+		transition: transform var(--hover-duaration) ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			img {
+				transform: scale(var(--image-scale));
+			}
+			&::before {
+				background-color: var(--hover-overlay);
+			}
+		}
+	}
+}

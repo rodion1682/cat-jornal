@@ -1,0 +1,125 @@
+.Button {
+	cursor: pointer;
+	background-color: transparent;
+	pointer-events: auto;
+}
+
+// animation
+
+.scale {
+	transition: transform 0.3s ease;
+	will-change: transform;
+	&:active {
+		transform: scale(var(--button-downscale));
+	}
+}
+
+// styles
+
+.dropdown {
+	min-height: var(--input-height);
+	color: var(--primary-color);
+	background-color: var(--secondary-bg-color);
+	display: flex;
+	align-items: center;
+	padding: 0px var(--padding-xxx-lg) 0px var(--padding-x-lg);
+	position: relative;
+	transition: all 0.3s ease 0s;
+	border-radius: var(--border-radius);
+	border: var(--border-width) solid transparent;
+	&__icon {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translate(0, -50%) rotate(180deg);
+		transition: transform 0.5s ease 0s;
+	}
+}
+
+.navbar {
+	width: 100%;
+	min-height: var(--navbar-link-height);
+	padding: 0px var(--padding-x-lg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--secondary-bg-color);
+	background-color: transparent;
+	border-bottom: var(--border-width) solid transparent;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--primary-bg-color);
+		}
+	}
+	&.active {
+		color: var(--primary-bg-color);
+		border-color: var(--primary-bg-color);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.submitBgColor {
+	color: var(--primary-bg-color);
+}
+
+.error {
+	border-color: var(--icon-edit-hover-color);
+}
+
+.dropdown_open {
+	border: var(--border-width) solid var(--hint-color);
+
+	.dropdown__icon {
+		transform: translate(0, -50%) rotate(0deg);
+	}
+}
+
+.select,
+.submit,
+.submitBgColor {
+	padding: var(--padding-md) var(--padding-x-lg);
+}
+
+.select {
+	width: 100%;
+	display: flex;
+	color: var(--primary-color);
+	transition: all 0.3s ease 0s;
+	background-color: transparent;
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--primary-bg-color);
+			background-color: var(--hint-color);
+		}
+	}
+}
+.submitBgColor,
+.submit {
+	background-color: var(--primary-color);
+	border-radius: var(--border-radius);
+	transition: background-color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--hint-color);
+		}
+	}
+}
+
+.password {
+	border-left: var(--border-width) solid var(--primary-color);
+	width: var(--input-height);
+	height: var(--input-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}

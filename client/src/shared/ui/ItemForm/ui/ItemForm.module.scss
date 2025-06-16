@@ -1,0 +1,44 @@
+.ItemForm {
+	@media (min-width: $md4) {
+		padding: 0px var(--padding-x-lg);
+	}
+	&__body {
+		display: flex;
+		gap: var(--gap-medium);
+		&:not(:last-child) {
+			margin-bottom: var(--margin-lg);
+		}
+		@media (max-width: $md3) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: $md4) {
+			&:not(:last-child) {
+				margin-bottom: var(--margin-sm);
+			}
+		}
+	}
+	&__inputs {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 290px;
+		gap: var(--gap-small);
+		@media (max-width: $md3) {
+			flex: 1 1 100%;
+		}
+	}
+	&__image {
+		flex: 1 1 auto;
+		@media (max-width: $md3) {
+			flex: 1 1 100%;
+		}
+	}
+	&__submit {
+		display: flex;
+		margin: 0 auto;
+		@media (max-width: $md3) {
+			flex: 1 1 100%;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+}
